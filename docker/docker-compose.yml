@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  node:
+    build: ./nodedocker
+    container_name: nodedocker
+    working_dir: /application
+    volumes:
+      - ../:/application
+    ports:
+      - "8080:8000"
+    tty: true
